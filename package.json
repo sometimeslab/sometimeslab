@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
+    "@nuxtjs/google-fonts": "^3.0.0-1",
+    "@nuxtjs/i18n": "^8.0.0-beta.7",
+    "@nuxtjs/tailwindcss": "^6.2.0",
+    "nuxt": "3.0.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "nuxt-swiper": "^0.1.9"
+  }
+}

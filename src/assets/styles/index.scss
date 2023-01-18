@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Noto Serif JP", "Noto Serif Traditional Chinese", sans-serif;
+  }
+  ::selection {
+    @apply bg-gray-200/75;
+  }
+}
+@layer utilities {
+  .orientation-sideways {
+    text-orientation: sideways;
+  }
+  .orientation-upright {
+    text-orientation: upright;
+  }
+  .orientation-mixed {
+    text-orientation: mixed;
+  }
+  .orientation-sideways-right {
+    text-orientation: sideways-right;
+  }
+  .orientation-glyph {
+    text-orientation: use-glyph-orientation;
+  }
+
+  .vertical-writing-lr {
+    writing-mode: vertical-lr;
+  }
+  .vertical-writing-rl {
+    writing-mode: vertical-rl;
+  }
+  .horizontal-writing-tb {
+    writing-mode: horizontal-tb;
+  }
+}
+
+@layer components {
+  .side-link-effect {
+    @apply relative;
+  }
+  .side-link-effect::before {
+    content: "";
+    @apply block border absolute right-0 top-0 h-full border-gray-300;
+  }
+  .side-link-effect::after {
+    content: "";
+    @apply block border absolute right-0 top-0 h-full border-gray-400 transition duration-300 opacity-0 scale-y-0 origin-top ease-[cubic-bezier(.645,.045,.355,1)];
+  }
+  .side-link-effect:hover::after {
+    @apply scale-y-100 opacity-100;
+  }
+}
