@@ -2,19 +2,19 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev -p 8080 --host www.sometimeslab.localhost",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
+    "@nuxtjs/apollo": "^5.0.0-alpha.5",
     "@nuxtjs/google-fonts": "^3.0.0-1",
-    "@nuxtjs/i18n": "^8.0.0-beta.7",
+    "@nuxtjs/i18n": "^8.0.0-beta.9",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "nuxt": "3.0.0",
-    "push-dir": "^0.4.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
   },

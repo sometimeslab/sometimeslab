@@ -53,4 +53,7 @@
   .side-link-effect:hover::after {
     @apply scale-y-100 opacity-100;
   }
+  .side-link-effect-active::after {
+    @apply scale-y-100 opacity-100;
+  }
 }

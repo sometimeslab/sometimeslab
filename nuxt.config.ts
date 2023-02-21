@@ -5,6 +5,9 @@ export default defineNuxtConfig({
       appName: process.env.APP_NAME || "Sometiems Lab",
     },
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   css: ["@/assets/styles/index.scss"],
   modules: [
     "@nuxtjs/tailwindcss",
@@ -34,24 +37,35 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/i18n",
+    "@nuxtjs/apollo",
   ],
   srcDir: "src/",
-
   i18n: {
-    locales: ["en", "zh-tw"], // used in URL path prefix
-    defaultLocale: "zh-tw", // default locale of your project for Nuxt pages and routings
+    defaultLocale: "zh", // default locale of your project for Nuxt pages and routings
+    locales: [
+      { code: "en", iso: "en-US", name: "English" },
+      { code: "zh", iso: "zh-TW", name: "繁體中文" },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
+    strategy: 'no_prefix',
     vueI18n: {
       legacy: false,
-      locale: "zh-tw",
       messages: {
-        "zh-tw": {
-          welcome: "歡迎",
-          link: "鏈接",
-        },
-        en: {
-          welcome: "Welcome",
-        },
+        en: require("./locales/en"),
+        zh: require("./locales/zh"),
       },
+    },
+  },
+
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: 'http://www.sometimeslab.localhost/graphql'
+      }
     },
   },
 });
