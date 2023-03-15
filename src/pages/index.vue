@@ -27,15 +27,15 @@ const onSwiper = (newSwiper) => {
 
 const swiperData = ref([
   {
-    image: "/img/banner-1.jpg",
+    image: "/images/banner-1.jpg",
     link: "/",
   },
   {
-    image: "/img/banner-2.jpg",
+    image: "/images/banner-2.jpg",
     link: "/",
   },
   {
-    image: "/img/banner-3.jpg",
+    image: "/images/banner-3.jpg",
     link: "/",
   },
 ]);

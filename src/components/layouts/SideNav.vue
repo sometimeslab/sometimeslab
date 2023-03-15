@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed left-0 h-full w-32 bg-gray-100 flex flex-row justify-between align-center px-4 py-8 vertical-writing-lr whitespace-nowrap"
+    class="fixed left-0 h-full w-32 bg-white flex flex-row justify-between align-center px-4 py-8 vertical-writing-lr whitespace-nowrap"
   >
     <div
       class="m-auto flex align-center justify-center side-link-effect px-2"
@@ -26,7 +26,7 @@
       </template>
     </div>
     <div class="m-auto flex flex-col align-center justify-center gap-y-2">
-      <!-- <NuxtImg preset="cover" class="w-14 h-14" src="/img/logo.png" /> -->
+      <!-- <NuxtImg preset="cover" class="w-14 h-14" src="/images/logo.png" /> -->
       <p @click="setLocale('en')">Eng</p>
       <span class="horizontal-writing-tb">/</span>
       <p @click="setLocale('zh')">中文</p>

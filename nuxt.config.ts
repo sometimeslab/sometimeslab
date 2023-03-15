@@ -12,19 +12,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-swiper",
-    [
-      "@nuxt/image-edge",
-      {
-        presets: {
-          cover: {
-            modifiers: {
-              fit: "cover",
-              format: "jpg",
-            },
-          },
-        },
-      },
-    ],
+    "@nuxt/image-edge",
     [
       "@nuxtjs/google-fonts",
       {
@@ -66,6 +54,17 @@ export default defineNuxtConfig({
       default: {
         httpEndpoint: 'http://www.sometimeslab.localhost/graphql'
       }
+    },
+  },
+
+  image: {
+    presets: {
+      cover: {
+        modifiers: {
+          fit: "cover",
+          format: "jpg",
+        },
+      },
     },
   },
 });

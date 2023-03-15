@@ -1,29 +1,22 @@
 <template>
-  <div class="w-full h-[50vh] block relative">
-    <picture>
-      <source :srcset="post.featuredImage.node.srcSet" />
-      <img
-        :src="post.featuredImage.node.guid"
-        alt="hero-banner"
-        class="w-full h-full object-cover"
-      />
-    </picture>
-    <NuxtLink
-      class="absolute h-full w-full top-0 left-0 bg-white/0 hover:bg-white/10 transition"
-      :to="localePath('/news/'+post.slug)"
-    >
+  <div class="w-full h-[50vh] block relative group grayscale hover:grayscale-0 transition-all">
+    <UtilsMask />
+    <nuxt-picture :src="src" :imgAttrs="{ class: 'w-full h-full object-cover object-center' }" />
+    <NuxtLink v-if="link" class="absolute h-full w-full top-0 left-0"
+      :to="localePath(link)">
     </NuxtLink>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  post: {
-    type: Object,
+  src: {
+    type: String,
     required: true,
-    default(rawProps) {
-      return {};
-    },
+  },
+  link: {
+    type: String,
+    required: false,
   },
 });
 const localePath = useLocalePath();
