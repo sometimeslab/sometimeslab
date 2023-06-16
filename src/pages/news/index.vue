@@ -1,12 +1,36 @@
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12">
-    <CommonHeroBanner class="col-span-2 md:col-span-3 lg:col-span-5" src="/images/banner-2.jpg" link="/news/jay-1" />
+  <div class="mt-36">
+    <div class="mb-12 pr-16 lg:pr-56 md:pr-28 border-b border-t">
+      <CommonHeroBanner
+        class="border-r"
+        title="果實的渴望"
+        src="/images/hatenakikatubo-mv.jpg"
+        link="/news/jay-1"
+      />
+    </div>
 
-    <CommonCard
-      v-for="index in 50"
-      src="/images/banner-2.jpg"
-      link="/news/jay-1"
-    />
+    <div class="grid gap-y-12">
+      <div
+        class="pr-16 lg:pr-56 md:pr-28 card-container"
+      >
+        <CommonCard
+          v-for="index in 6"
+          src="/images/hatenakikatubo.jpg"
+          link="/news/jay-1"
+          title="果實的渴望"
+        />
+      </div>
+      <div
+        class="pr-16 lg:pr-56 md:pr-28 card-container-sm"
+      >
+        <CommonCard
+          v-for="index in 6"
+          src="/images/hatenakikatubo.jpg"
+          link="/news/jay-1"
+          title="果實的渴望"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

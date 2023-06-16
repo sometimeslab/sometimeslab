@@ -1,9 +1,9 @@
 <template>
   <div
-    class="vertical-writing-lr fixed right-7 top-7 flex gap-x-2 whitespace-nowrap z-50 text-white mix-blend-difference tracking-widest"
+    class="vertical-writing-lr fixed right-7 top-7 flex gap-x-2 whitespace-nowrap z-50 text-gray-400 tracking-widest"
   >
     <template v-for="(breadcrumb, index) in breadcrumbs">
-      <span class="pl-0.5" v-if="index != 0">/</span>
+      <span class="pl-0.5" v-if="index != 0">\</span>
       <NuxtLink v-if="breadcrumbs.length != index + 1" :to="breadcrumb.path">{{
         $t(breadcrumb.name)
       }}</NuxtLink>
@@ -43,6 +43,12 @@ const breadcrumbs = computed(() => {
     });
     return (path += `/${route}`);
   }, "");
+
+  breadcrumbs.unshift({
+    path: "/",
+    name: "home",
+  });
+
   return breadcrumbs;
 });
 </script>

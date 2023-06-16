@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev -p 8080 --host www.sometimeslab.localhost",
+    "dev": "nuxt dev -p 80 --host www.sometimeslab.localhost",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
