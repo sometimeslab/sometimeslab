@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/i18n",
-    "@nuxtjs/apollo",
+    // "@nuxtjs/apollo",
   ],
   srcDir: "src/",
   i18n: {
@@ -36,10 +36,10 @@ export default defineNuxtConfig({
     ],
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',  // recommended
+      cookieKey: "i18n_redirected",
+      redirectOn: "root", // recommended
     },
-    strategy: 'no_prefix',
+    strategy: "no_prefix",
     vueI18n: {
       legacy: false,
       messages: {
@@ -49,13 +49,13 @@ export default defineNuxtConfig({
     },
   },
 
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: 'http://www.sometimeslab.localhost/graphql'
-      }
-    },
-  },
+  // apollo: {
+  //   clients: {
+  //     default: {
+  //       httpEndpoint: 'http://www.sometimeslab.localhost/graphql'
+  //     }
+  //   },
+  // },
 
   image: {
     presets: {
