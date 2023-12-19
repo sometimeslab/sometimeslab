@@ -1,10 +1,10 @@
 <template>
   <div
-    class="fixed left-0 top-0 h-full w-32 bg-white flex flex-row justify-between align-center px-4 py-8 vertical-writing-lr whitespace-nowrap border-r">
+    class="fixed left-0 top-0 h-full w-32 bg-white flex flex-row justify-between align-center px-4 py-8 vertical-writing-lr whitespace-nowrap border-r z-10">
     <div class="m-auto flex align-center justify-center side-link-effect px-2" :class="[
       route.name == 'index' ? 'side-link-effect-active' : '',
     ]">
-      <nuxt-link to="/" class="text-4xl">{{ config.appName }}</nuxt-link>
+      <nuxt-link to="/" class="text-4xl">{{ config.public.appName }}</nuxt-link>
     </div>
     <div class="flex-1 m-auto flex align-center justify-center gap-x-2">
       <template v-for="(nav, index) in navList">

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-swiper",
-    "@nuxt/image-edge",
+    "@nuxt/image",
     [
       "@nuxtjs/google-fonts",
       {
@@ -40,13 +40,7 @@ export default defineNuxtConfig({
       redirectOn: "root", // recommended
     },
     strategy: "no_prefix",
-    vueI18n: {
-      legacy: false,
-      messages: {
-        en: require("./locales/en"),
-        zh: require("./locales/zh"),
-      },
-    },
+    vueI18n: './i18n.option.ts'
   },
 
   // apollo: {
