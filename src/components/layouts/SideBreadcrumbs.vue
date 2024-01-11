@@ -9,10 +9,14 @@
         >\</span
       >
       <NuxtLink v-if="breadcrumbs.length != index + 1" :to="breadcrumb.path">{{
-        $t(breadcrumb.name)
+        $t("sidebar." + breadcrumb.name)
       }}</NuxtLink>
       <p class="cursor-default" v-else>
-        {{ $te(breadcrumb.name) ? $t(breadcrumb.name) : breadcrumb.name }}
+        {{
+          $te("sidebar." + breadcrumb.name)
+            ? $t("sidebar." + breadcrumb.name)
+            : breadcrumb.name
+        }}
       </p>
     </template>
   </div>

@@ -41,8 +41,8 @@ const changeLocale = () => {
 };
 
 const navList = ref([
-  { text: "news", link: "/news", name: "news" },
-  { text: "link", link: "/", name: "index" },
-  { text: "link", link: "/", name: "index" },
+  { text: "sidebar.news", link: "/news", name: "news" },
+  { text: "sidebar.link", link: "/", name: "index" },
+  { text: "sidebar.profile", link: "/profile", name: "profile" },
 ]);
 </script>

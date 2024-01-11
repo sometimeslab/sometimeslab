@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  css: ["@/assets/styles/index.scss"],
+  // css: ["@/assets/styles/index.scss"],
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-swiper",
@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     // "@nuxtjs/apollo",
   ],
   srcDir: "src/",
+  tailwindcss: {
+    cssPath: '~/assets/styles/index.scss',
+    viewer: false
+  },
   i18n: {
     defaultLocale: "zh", // default locale of your project for Nuxt pages and routings
     locales: [
