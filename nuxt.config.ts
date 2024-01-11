@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  devtools: { enabled: false },
   // css: ["@/assets/styles/index.scss"],
   modules: [
     "@nuxtjs/tailwindcss",

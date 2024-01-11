@@ -1,18 +1,25 @@
 <template>
   <Swiper
-    :modules="[SwiperAutoplay, SwiperEffectFade, SwiperNavigation]"
+    :modules="[SwiperAutoplay, SwiperEffectFade, SwiperPagination]"
+    :pagination="{
+      clickable: true,
+    }"
     :slides-per-view="1"
     :loop="true"
     :effect="'fade'"
     :autoplay="{
-      delay: 6000,
+      delay: 2000,
     }"
     class="select-none"
     @swiper="onSwiper"
   >
     <SwiperSlide v-for="data in swiperData" style="height: 100vh">
       <nuxt-link :to="localePath(data.link)">
-        <nuxt-img preset="cover" class="h-full w-full object-cover" :src="data.image" />
+        <nuxt-img
+          preset="cover"
+          class="h-full w-full object-cover"
+          :src="data.image"
+        />
       </nuxt-link>
     </SwiperSlide>
   </Swiper>

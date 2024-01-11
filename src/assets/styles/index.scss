@@ -9,6 +9,10 @@
   ::selection {
     @apply bg-gray-300;
   }
+  :root {
+    --swiper-pagination-color: rgba(255, 255, 255, 0.7);
+    --swiper-pagination-bullet-inactive-color: rgb(255, 255, 255);
+  }
 }
 @layer utilities {
   .orientation-sideways {
