@@ -18,8 +18,10 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          "Noto+Serif+JP": true,
-          "Noto+Serif+Traditional+Chinese": true,
+          "Noto+Serif+JP": "200..900",
+          "Noto+Serif+TC": "200..900",
+          "Noto+Serif+SC": "200..900",
+          "Noto+Serif": { wght: "200..900", ital: "200..700" },
         },
         preload: true,
         download: true,
@@ -30,8 +32,8 @@ export default defineNuxtConfig({
   ],
   srcDir: "src/",
   tailwindcss: {
-    cssPath: '~/assets/styles/index.scss',
-    viewer: false
+    cssPath: "~/assets/styles/index.scss",
+    viewer: false,
   },
   i18n: {
     defaultLocale: "zh", // default locale of your project for Nuxt pages and routings
@@ -45,7 +47,7 @@ export default defineNuxtConfig({
       redirectOn: "root", // recommended
     },
     strategy: "no_prefix",
-    vueI18n: './i18n.option.ts'
+    vueI18n: "./i18n.option.ts",
   },
 
   // apollo: {

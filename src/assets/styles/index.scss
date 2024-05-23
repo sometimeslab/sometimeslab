@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    font-family: "Noto Serif JP", "Noto Serif Traditional Chinese", sans-serif;
+  body.zh {
+    font-family: "Noto Serif TC", "Noto Serif SC", 'Times New Roman', Times, serif;
+  }
+  body.en {
+    font-family: "Noto Serif JP", "Noto Serif TC", 'Times New Roman', Times, serif;
   }
   ::selection {
     @apply bg-gray-300;

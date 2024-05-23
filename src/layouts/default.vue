@@ -7,3 +7,18 @@
     <LayoutsSideBreadcrumbs />
   </div>
 </template>
+
+<script setup lang="ts">
+const { locale } = useI18n();
+
+useHead({
+  title: 'Sometimes Lab',
+  
+  bodyAttrs: {
+    class: computed(() => {
+      if (locale.value == "en") return 'en';
+      if (locale.value == "zh") return 'zh';
+    }),
+  },
+})
+</script>

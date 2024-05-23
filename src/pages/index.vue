@@ -39,43 +39,43 @@ const onSwiper = (newSwiper) => {
 const swiperData = ref([
   {
     image: "/images/mazco-1.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-2.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-3.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-4.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-5.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-6.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-7.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-8.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-9.jpg",
-    link: "/news",
+    link: "/garages",
   },
   {
     image: "/images/mazco-10.jpg",
-    link: "/news",
+    link: "/garages",
   },
 ]);
 </script>

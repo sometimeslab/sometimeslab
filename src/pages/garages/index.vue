@@ -5,7 +5,7 @@
         class="border-r"
         title="果實的渴望"
         src="/images/hatenakikatubo-mv.jpg"
-        link="/news/jay-1"
+        link="/garages/jay-1"
       />
     </div>
 
@@ -16,7 +16,7 @@
         <CommonCard
           v-for="index in 6"
           src="/images/hatenakikatubo.jpg"
-          link="/news/jay-1"
+          link="/garages/jay-1"
           title="果實的渴望"
         />
       </div>
@@ -26,7 +26,7 @@
         <CommonCard
           v-for="index in 6"
           src="/images/hatenakikatubo.jpg"
-          link="/news/jay-1"
+          link="/garages/jay-1"
           title="果實的渴望"
         />
       </div>
