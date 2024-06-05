@@ -3,8 +3,8 @@
     class="fixed left-0 top-0 h-full w-32 bg-white flex flex-row justify-between align-center px-4 py-8 vertical-writing-lr whitespace-nowrap border-r z-10"
   >
     <div
-      class="m-auto flex align-center justify-center side-link-effect px-2"
-      :class="[route.name == 'index' ? 'side-link-effect-active' : '']"
+      class="m-auto flex align-center justify-center side-link-effect pl-1"
+      :class="{ 'side-link-effect-active': route.name == 'index' }"
     >
       <nuxt-link to="/" class="text-4xl">{{ config.public.appName }}</nuxt-link>
     </div>
@@ -13,9 +13,10 @@
         <NuxtLink
           :to="nav.link"
           class="side-link-effect"
-          :class="[route.name == nav.name ? 'side-link-effect-active' : '']"
-          >{{ $t(nav.text) }}</NuxtLink
+          :class="{ 'side-link-effect-active': route.path.includes(nav.name) }"
         >
+          {{ $t(nav.text) }}
+        </NuxtLink>
         <span v-if="index != navList.length - 1" class="pl-0.5">/</span>
       </template>
     </div>

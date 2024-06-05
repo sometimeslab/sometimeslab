@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      appName: process.env.APP_NAME || "Sometiems Lab",
+      appName: process.env.APP_NAME || "Sometimes Lab",
     },
   },
   app: {
@@ -38,10 +38,11 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: "zh", // default locale of your project for Nuxt pages and routings
     locales: [
-      { code: "en", iso: "en-US", name: "English" },
       { code: "zh", iso: "zh-TW", name: "繁體中文" },
+      { code: "en", iso: "en-US", name: "English" },
     ],
     detectBrowserLanguage: {
+      fallbackLocale: "zh",
       useCookie: true,
       cookieKey: "i18n_redirected",
       redirectOn: "root", // recommended

@@ -21,6 +21,11 @@ pnpm install --shamefully-hoist
 
 Start the development server on http://localhost:3000
 
+Add the following to your hosts file
+```
+127.0.0.1    www.sometimeslab.localhost # local
+```
+Then
 ```bash
 npm run dev
 ```
